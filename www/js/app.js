@@ -239,7 +239,7 @@ $("body").delegate("#display","click", function(){
 		       var source   = $("#emphone").html();
        		  var template = Handlebars.compile(source);
            	  var html    = template(data);
-       		  $("#vipload").html(html);
+       		  htmlContainer.html(html);
             	
 
                 }
