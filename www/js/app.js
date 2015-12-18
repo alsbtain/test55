@@ -3,7 +3,7 @@
 
     var htmlContainer = $("#htmlWrapper");
     var htmlContainer1 = $("#wrapperadmin");
-    checkReply = function(data) {
+checkReply = function(data) {
         if (typeof(data.status) != "undefined") {
            
             alert(data.message);
@@ -200,7 +200,7 @@ $("body").delegate("#display","click", function(){
         var source   = $("#search-rp").html();
         var template = Handlebars.compile(source);
         var html    = template();
-        $("#loadmehere").html(html);
+       htmlContainer.html(html);
 
 });
 
