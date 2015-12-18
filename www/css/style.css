@@ -1,0 +1,68 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+input:focus{
+    outline: none !important;
+    width: relative;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.error{
+	width: 300px;
+	padding: 5px;
+	background: lime;
+	color: #000;
+	font-size: 20px;
+	border: 1px solid #888;
+	margin: 10px auto 0;
+	text-align: center;
+	border-radius: 10px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.refresh{
+  margin: 15px 0 0 0;
+  color: green;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+.loadingIcon{
+  margin: 20px;
+  text-align: center;
+}
+code {
+  font-size: 80%;
+
+}
+.loginWrapper{
+    width: 300px;
+    margin: 10px auto 0;
+    border: 1px solid #dedede;
+    padding: 20px;
+    border-radius: 10px;
+}
+.loginWrapper h2{
+  text-align: center;
+  color: blue;
+
+}
+.notificationError{ 
+    width: 300px;
+    margin: 10px auto 0;
+}
