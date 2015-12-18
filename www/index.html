@@ -251,9 +251,13 @@
 
 				</table>
 				<form class="form-signin" >
-              <input type="text" id="pointtoadd" class="form-control" placeholder="Add point" required="" autofocus="">
+              <input type="number" id="pointtoadd" class="form-control" placeholder="Add point" required="" autofocus="" min="1" step="1"/>
               <br>
-              <input id="bntaddpoint" type="button" class="btn btn-lg btn-primary btn-block" value="Add point" />
+              
+              <button  id="bntaddpoint" class="btn btn-primary btn-lg btn-block">Add point</button>
+			<button  id="dispoint" class="btn btn-danger btn-lg btn-block">discount</button>
+              
+          
             </form>
 				</script>
 <!--------------------------------------------------------------------=>

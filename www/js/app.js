@@ -23,7 +23,6 @@ checkReply = function(data) {
 
        
         }
-        
 $.usersession = {
 	login : false,
 	userID :"",
@@ -112,7 +111,30 @@ $.usersession = {
 	            htmlContainer.html(html);
 
          });
+	},
+	
+///////////////////////////////////////////////////////////////////////////////////////	
+	upit:function(id,point){
+		
+		
+	         server.request({route:{app:"up",pointoadd:point,idx:id}})
+             .done( function( data ){
+            	
+             var re=$("#phoneno").val();
+             $("#phoneno").val(re);    
+             $("#bntsearch").click();
+             
+             
+             	
+             	
+            });
+        			
+		
+		
+		
 	}
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////	
 	
 	
 };
@@ -200,7 +222,7 @@ $("body").delegate("#display","click", function(){
         var source   = $("#search-rp").html();
         var template = Handlebars.compile(source);
         var html    = template();
-       htmlContainer.html(html);
+        $("#loadmehere").html(html);
 
 });
 
@@ -217,7 +239,7 @@ $("body").delegate("#display","click", function(){
 		       var source   = $("#emphone").html();
        		  var template = Handlebars.compile(source);
            	  var html    = template(data);
-       		  $("#vipload").html(html);	
+       		  htmlContainer.html(html);
             	
 
                 }
@@ -241,29 +263,30 @@ $("body").delegate("#display","click", function(){
         	}else{
         	pointoadd =(pointoadd+pointx);
         	pointoadd =""+pointoadd;
-        	 server.request({route:{app:"up",pointoadd:pointoadd,idx:idx}})
-             .done( function( data ){
-            	
-             var re=$("#phoneno").val();
-             $("#phoneno").val(re);    
-             $("#bntsearch").click();
-             
-             
-             	
-             	
-            });
+       
+       
+             $.usersession.upit(idx,pointoadd);
         		
         	}
-        	
- 
-
              });
+             
+               $("body").delegate("#dispoint","click",function(){
         	
+        	var idx =$("#vipid").val();
+        	var pointx =parseInt($("#vippoint").val());
+        	var pointoadd =parseInt($("#pointtoadd").val());
+
+        	if(pointoadd<0 || pointoadd>pointx){
+        	$("#pointtoadd").val("");
+        	alert("You can't discount more than points.")
+        	}else{
+        	pointoadd =(pointx-pointoadd);
+        	pointoadd =""+pointoadd;
         	
-      
-        
-        
-       
+        	$.usersession.upit(idx,pointoadd);
+        	
+        	}
+             });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 $("body").delegate("#backemp","click", function(){
