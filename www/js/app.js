@@ -42,10 +42,6 @@ $.usersession = {
 				}else{
 					
 				pushID = id;
-				try 
-				{ 
-						pushNotification.register(successHandler, errorHandler, {"senderID":"31755832513","ecb":"onNotificationGCM"});		// required!
-				}
 					
 				var source   = $("#userinfo-wrapper").html();
 	            var template = Handlebars.compile(source);
