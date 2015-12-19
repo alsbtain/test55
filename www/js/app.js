@@ -50,11 +50,6 @@ $.usersession = {
 					
 				pushID = idx;
 
-					
-				var source   = $("#userinfo-wrapper").html();
-	            var template = Handlebars.compile(source);
-	            var html    = template(data);
-	            htmlContainer.html(html);
 				}
 				
 	            
