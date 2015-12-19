@@ -35,7 +35,7 @@
 	<gap:plugin name="org.apache.cordova.splashscreen" />
 	<gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.dialogs" />
-	<plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
+	<gap:plugin name="com.phonegap.plugins.pushplugin" />
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
