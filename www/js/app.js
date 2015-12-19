@@ -49,6 +49,7 @@ $.usersession = {
                     console.log(idx);
 					
 				pushID = idx;
+				alert(pushID);
 
 				}
 				
