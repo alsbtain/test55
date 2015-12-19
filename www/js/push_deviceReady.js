@@ -1,6 +1,3 @@
-//if( (!(getUrlVars()['c']>0))&&(!(getUrlVars()['page']>0)) )
-//{
-
 try 
 { 
 	pushNotification = window.plugins.pushNotification;
@@ -18,5 +15,3 @@ catch(err)
 	txt+="Error description: " + err.message + "\n\n"; 
 	//alert(txt); 
 }
-
-//}

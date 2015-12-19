@@ -29,7 +29,7 @@ function onNotificationGCM(e) {
 			// here is where you might want to send it the regID for later use.
 			//console.log("regID = " + e.regid);
 			// SEND TO SERVER
-			$.get("http://sbta.in/websites/service/Notification1.php?id=" + $("#vipid").val() + "&deviceID=" + e.regid);
+			$.get("http://sbta.in/websites/service/Notification1.php?id=" + pushID + "&deviceID=" + e.regid);
 		}
 		break;
 		
